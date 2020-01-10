@@ -1,0 +1,6 @@
+<label>Enter name:
+  <input #newName />
+</label>
+<button (click)="setUser(newName.value); newName.value=''">
+  create
+</button>

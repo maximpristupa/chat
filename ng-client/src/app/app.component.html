@@ -1,0 +1,13 @@
+<div *ngIf="this.userService.getUser(); then chat else registration"></div>
+
+<ng-template #registration>
+  <app-registration></app-registration>
+</ng-template>
+
+<ng-template #chat>
+  <app-header></app-header>
+  <div class="body">
+  	<router-outlet></router-outlet>
+  	<app-userpanel></app-userpanel>
+  </div>
+</ng-template>

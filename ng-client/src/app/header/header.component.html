@@ -1,0 +1,8 @@
+<div class="header">
+	<div class="user">
+		<small>logged in as</small>
+		<p class="username">{{user.name}}</p>
+	</div>
+	<button class="messages" routerLink="/messages" mat-button>Go to chat room</button>
+	<button (click)="exitUser();" class="exit" mat-button>exit</button>
+</div>

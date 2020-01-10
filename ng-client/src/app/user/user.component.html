@@ -1,0 +1,9 @@
+<div class="user-room">
+	<h2>User {{messages[0].userName}} has {{messages.length}} messages</h2> <div class="status" [class.active]="onlineUser(messages[0].userName)"></div>
+	<ul>
+		<ol *ngFor="let message of messages">
+	    <span>{{message.text}}</span>
+	    <label>{{ +message.createdAt | date:'H:mm':'UTC+3'}}</label>
+	  </ol>
+	</ul>
+</div>

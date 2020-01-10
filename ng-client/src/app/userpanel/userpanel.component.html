@@ -1,0 +1,6 @@
+<h2>Online users</h2>
+<ul>
+	<ol *ngFor="let user of onlineUsers">
+    <a routerLink="/user/{{user}}">{{user}}</a>
+  </ol>
+</ul>

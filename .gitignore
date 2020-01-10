@@ -1,2 +1,3 @@
 server/node_modules/*
 client/node_modules/*
+ng-client/node_modules/*

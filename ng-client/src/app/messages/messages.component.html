@@ -1,0 +1,20 @@
+<div class="chat">
+	<h2>Chat</h2>
+		<div class="chat-wondow">
+			<div class="message" *ngFor="let message of messages" [class.own]="message.userName === user.name">
+		    <div *ngIf="message.userName !== user.name">
+		    	<a class="message-user" routerLink="/user/{{message.userName}}">{{message.userName}}</a>
+		    </div>
+		    <div class="message-body">
+		    	<div class="message-text">{{message.text}}</div>
+		    </div>
+		    <div class="message-time">{{ +message.createdAt | date:'H:mm':'UTC+3'}}</div>
+		  </div>
+	  </div>
+	<div>
+    <input class="input-message" #messageText />
+	  <button class="input-button" (click)="add(messageText.value); messageText.value=''">
+	    add
+	  </button>
+	</div>
+</div>
